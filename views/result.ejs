@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<div>
+    <% if(val.length!=0){%>
+        <hr />
+        <div>
+            <% val.forEach(function(hit){ %>
+                <h2><%= hit._source.title %></h2>
+            <% }) %>
+        </div>
+    <%}%>
+    <% if(val.length==0){%>
+        <h2>No movie:(</h2>
+    <%}%>   
+</div>
+
+<%- include('partials/footer') %>
